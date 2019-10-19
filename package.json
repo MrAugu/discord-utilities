@@ -1,0 +1,30 @@
+{
+  "name": "discord-utils",
+  "version": "0.0.1",
+  "description": "A lightweight and easy to use package with utility functions that you may need when developing a discord bot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrAugu/discord-utils.git"
+  },
+  "keywords": [
+    "discord-utills",
+    "bot-utils",
+    "utilities",
+    "discord",
+    "discord.js",
+    "discord-bots",
+    "discord.utilities",
+    "utility",
+    "functions"
+  ],
+  "author": "MrAugu#7917",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MrAugu/discord-utils/issues"
+  },
+  "homepage": "https://github.com/MrAugu/discord-utils#readme"
+}
