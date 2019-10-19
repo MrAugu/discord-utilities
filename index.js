@@ -60,6 +60,20 @@ class DiscordUtils {
 
     return string.substr(0, length);
   }
+
+  static roundFloat (float, decimals = 1) {
+    if (!float && float !== 0) throw new TypeError("You must specify a float.");
+    if (isNaN(float)) throw new TypeError("You must specify a valid float.");
+    if (isNaN(decimals)) throw new TypeError("You must specify a valid amount of decimals to keep.");
+
+    return float.toFixed(decimals);
+  }
+
+  static includesNumber (string) {
+    if (!string) throw new TypeError("You must specify a string.");
+    
+    return /\d/.test(string);
+  }
 };
 
 module.exports = DiscordUtils;
