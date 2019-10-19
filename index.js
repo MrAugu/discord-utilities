@@ -40,7 +40,7 @@ class DiscordUtils {
     return `#${Math.floor(Math.random()*16777215).toString(16)}`;
   }
 
-  static randomInteger (min, max) {
+  static randomNumber (min, max) {
     if (!min && min !== 0 || !max && max !== 0) throw new TypeError("You must specify a minimum and a maximum range.");
     if (isNaN(min) || isNaN(max)) throw new TypeError("You must specify valid numbers.");
     if (min > max) throw new TypeError("Invalid range. Minimum must be smaller than the maximum.");
@@ -48,6 +48,18 @@ class DiscordUtils {
     return Math.floor(Math.random() * (min - max)) + (max + 1);
   }
 
+  static randomString (length) {
+    if (!length && length !== 0) throw new TypeError("You must specify a length.");
+    if (isNaN(length)) throw new TypeError("You must specify a valid length.");
+
+    var string = "";
+
+    for (var i = 0; i < length; i++) {
+      string += Math.random().toString(36).substr(2);
+    }
+
+    return string.substr(0, length);
+  }
 };
 
 module.exports = DiscordUtils;
