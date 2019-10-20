@@ -71,8 +71,38 @@ class DiscordUtils {
 
   static includesNumber (string) {
     if (!string) throw new TypeError("You must specify a string.");
-    
+
     return /\d/.test(string);
+  }
+
+  static isNumber (number) {
+    if (!number && number !== 0) throw new TypeError("You must specify a value.");
+
+    return !isNaN(number) && isFinite(number);
+  }
+
+  static fetchTime (ms, object = false) {
+    var totalSeconds = (ms / 1000);
+    var days = Math.floor(totalSeconds / 86400);
+    totalSeconds %= 86400;
+    var hours = Math.floor(totalSeconds / 3600);
+    totalSeconds %= 3600;
+    var minutes = Math.floor(totalSeconds / 60);
+    var seconds = totalSeconds % 60;
+    seconds = Math.floor(seconds);
+
+    if (object === true) return { days, hours, minutes, seconds };
+    return `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
+  }
+
+  static toProperCase (string) {
+    if (!string) throw new TypeError("A string must be specified.");
+
+    string = string.replace(/([^\W_]+[^\s-]*) */g, (content) => {
+      return content.charAt(0).toUpperCase() + content.substr(1).toLowerCase();
+    });
+
+    return string;
   }
 };
 
