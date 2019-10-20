@@ -1,9 +1,9 @@
 {
-  "name": "discord-utils",
+  "name": "discord-utilities",
   "version": "1.0.0",
   "description": "A lightweight and easy to use package with utility functions that you may need when developing a discord bot.",
   "main": "index.js",
-  
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MrAugu/discord-utils.git"
