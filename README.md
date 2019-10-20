@@ -1,4 +1,4 @@
-# discord-utils
+# discord-utilities
 A lightweight, updated and easy to use package with utility functions that you may need when developing a discord bot or javascript programs.
 
 # Bugs, Glitches & Issues
@@ -10,11 +10,11 @@ If you need help, join our <a href="https://discord.gg/6xR9ruy">discord server</
 # Installation
 You can easily get it from NPM.
 ```txt
-npm install discord-utils
+npm install discord-utilities
 ```
 
 # Functions
-Reffering to `Utils` as `const Utils = require("discord-utils");`.
+Reffering to `Utils` as `const Utils = require("discord-utilities");`.
 
 <table style="width:100%">
   <tr>
