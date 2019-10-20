@@ -81,6 +81,10 @@ class DiscordUtils {
     return !isNaN(number) && isFinite(number);
   }
 
+  static isObject (object) {
+    return input && input.constructor === Object;
+  }
+
   static fetchTime (ms, object = false) {
     var totalSeconds = (ms / 1000);
     var days = Math.floor(totalSeconds / 86400);
