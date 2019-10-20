@@ -105,8 +105,27 @@ class DiscordUtils {
     return string;
   }
 
-   static isObject (object) {
+  static isObject (object) {
     return object && object.constructor === Object;
+  }
+  
+  static wait (ms) {
+    return new Promise(resolve => {
+        setTimeout(resolve, ms);
+      });
+  }
+
+  static async awaitReply (message, id, question, limit = 30000) {
+    const filter = msg => msg.author.id === id;
+    await message.channel.send(question).catch(e => console.log(e));
+
+    try {
+      const collected = await message.channel.awaitMessages(filter, { max: 1, time: limit, errors: ["time"] });
+      var placeHolder = collected.first().content; // eslint-no-unused-vars
+      return collected.first();
+    } catch (e) {
+      return false;
+    }
   }
 };
 
