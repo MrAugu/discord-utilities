@@ -3,3 +3,6 @@ node_modules
 
 # Testing Files
 test.js
+
+# Package-Lock
+package-lock.json
