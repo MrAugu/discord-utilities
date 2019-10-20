@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/MrAugu/discord-utils/issues"
   },
-  "homepage": "https://github.com/MrAugu/discord-utils#readme"
+  "homepage": "https://github.com/MrAugu/discord-utils#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
 }
