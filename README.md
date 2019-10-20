@@ -14,6 +14,8 @@ npm install discord-utils
 ```
 
 # Functions
+Reffering to `Utils` as `const Utils = require("discord-utils");`.
+
 <table style="width:100%">
   <tr>
     <th>Function Name</th>
