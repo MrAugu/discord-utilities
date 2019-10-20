@@ -105,6 +105,10 @@ class DiscordUtils {
     return string;
   }
 
+  static isObject (object) {
+    return object && object.constructor === Object;
+  }
+  
   static wait (ms) {
     return new Promise(resolve => {
         setTimeout(resolve, ms);
