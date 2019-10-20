@@ -37,7 +37,7 @@ class DiscordUtils {
   }
 
   static randomHex () {
-    return `#${Math.floor(Math.random()*16777215).toString(16)}`;
+    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   }
 
   static randomNumber (min, max) {
@@ -108,7 +108,7 @@ class DiscordUtils {
   static isObject (object) {
     return object && object.constructor === Object;
   }
-  
+
   static wait (ms) {
     return new Promise(resolve => {
         setTimeout(resolve, ms);
