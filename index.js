@@ -127,6 +127,12 @@ class DiscordUtils {
       return false;
     }
   }
+
+  static paginate (arr, pageSize, selectedPage) {
+    --selectedPage;
+    const output = arr.slice(selectedPage * pageSize, (selectedPage + 1) * pageSize);
+    return output;
+  }
 };
 
 module.exports = DiscordUtils;
